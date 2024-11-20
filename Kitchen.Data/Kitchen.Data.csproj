@@ -1,0 +1,41 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+  </PropertyGroup>
+  <PropertyGroup>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="DAL\DataRepository.cs" />
+    <Compile Include="DAL\UnitOfWork.cs" />
+    <Compile Include="DataContexts\KitchenContext.cs" />
+    <Compile Include="Enumerators\AccessLevel.cs" />
+    <Compile Include="Enumerators\Category.cs" />
+    <Compile Include="Enumerators\Status.cs" />
+    <Compile Include="Models\BaseClass.cs" />
+    <Compile Include="Models\DailyMenu.cs" />
+    <Compile Include="Models\Group.cs" />
+    <Compile Include="Models\Client.cs" />
+    <Compile Include="Models\MealRequest.cs" />
+    <Compile Include="Models\MenuCatalog.cs" />
+    <Compile Include="Models\MenuItem.cs" />
+    <Compile Include="Models\User.cs" />
+    <Compile Include="Models\Resident.cs" />
+    <Compile Include="ViewModels\DashboardViewModel.cs" />
+    <Compile Include="ViewModels\PagingViewModel.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Repositories\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="9.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration" Version="9.0.0" />
+    <PackageReference Include="MongoDB.Driver" Version="3.0.0" />
+    <PackageReference Include="PagedList" Version="1.17.0" />
+  </ItemGroup>
+
+</Project>
